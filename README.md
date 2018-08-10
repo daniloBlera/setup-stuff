@@ -13,8 +13,7 @@ obs.: It might be a good idea to run this script in (or somewhere close to) the 
 ... Anyway, back into installing stuff.
 
 # Install stuff pls
-Running the `dsstne_setup.sh` script will do the steps below...
-
+Running the `dsstne_setup.sh` script will do the steps below but maybe you just like reading and stuff, I don't know...
 
 # In the beginning, there's docker and nvidia's plugin
 First updating stuff up
@@ -38,9 +37,7 @@ Adding Docker's public key and repository then installing it.
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
 sudo apt-get update && sudo apt-get install docker-ce -y
 ```
 
@@ -55,11 +52,8 @@ Getting nvidia's docker repository and installing the plugin
 
 ```bash
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-
 curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu16.04/amd64/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-
 sudo apt-get update && sudo apt-get install -y nvidia-docker2
-
 sudo pkill -SIGHUP dockerd
 ```
 
